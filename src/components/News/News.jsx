@@ -6,7 +6,7 @@ const News = () => {
   const [data, setData] = useState([])
   const getdata = async () => {
     const ress = await axios.get("https://newsapi.org/v2/top-headlines?country=eg&apiKey=810930c84b26472ab86cb93b44af99b4")
-    setData(ress.data.articles)
+    setData(ress.data.articles)  // This is to get the data
   }
   useEffect(() => {
 
@@ -14,7 +14,7 @@ const News = () => {
   }, [])
   return (
     <div className="AllNews">
-    <h3 className="heading"> هنا سوف تجد وتتعرف علي اخر واحدث الاخبار المحليه والعالميه</h3>
+      <h3 className="heading"> هنا سوف تجد وتتعرف علي اخر واحدث الاخبار المحليه والعالميه</h3>
       {data.map((item) => (
         <div className="News" key={item.id}>
           <div className="InfoImg">
