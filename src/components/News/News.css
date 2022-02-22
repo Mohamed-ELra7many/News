@@ -36,6 +36,10 @@ height: 100%;
 width:100%;
 border-radius: 10px;
 height: 100%;
+transition: .5s;
+}
+.News .InfoImg img:hover{
+    transform: scaleX(.7);
 }
 .News .InfoText{
 flex:1;
